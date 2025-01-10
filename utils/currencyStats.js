@@ -1,6 +1,5 @@
 const axios = require("axios");
-const Crypto = require("../Model/CryptoDetails"); // Your Mongoose model
-// const Crypto = require("./models/Crypto"); // Adjust the path as per your file structure
+const Crypto = require("../Model/CryptoDetails"); 
 
 async function fetchCryptoData() {
     try {
@@ -8,7 +7,7 @@ async function fetchCryptoData() {
             "https://api.coingecko.com/api/v3/simple/price",
             {
                 params: {
-                    ids: "bitcoin,matic-network,ethereum", // 'polygon' is the new name for 'matic'
+                    ids: "bitcoin,matic-network,ethereum",
                     vs_currencies: "usd",
                     include_market_cap: true,
                     include_24hr_change: true,
@@ -27,7 +26,7 @@ async function fetchCryptoData() {
             },
             {
                 name: "matic-network",
-                price_usd: data['matic-network'].usd, // Correct key for matic-network
+                price_usd: data['matic-network'].usd,
                 market_cap_usd: data['matic-network'].usd_market_cap,
                 change_24h: data['matic-network'].usd_24h_change
             },
@@ -46,10 +45,10 @@ async function fetchCryptoData() {
 }
 
 
-// Save data to the database
+
 const saveCryptoData = async (data) => {
     try {
-        await Crypto.insertMany(data); // Adjust according to your schema
+        await Crypto.insertMany(data); 
         console.log("Data saved to the database.");
     } catch (err) {
         console.error("Error saving crypto data:", err.message);
