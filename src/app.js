@@ -60,7 +60,7 @@ app.use('/', (req, res) => {
                                         <!-- Stats Endpoint -->
                                         <div class="mb-8 p-6 bg-gray-50 rounded-lg">
                                             <h3 class="text-xl font-bold mb-2">Get Latest Statistics</h3>
-                                            <p class="mb-4 text-gray-600">Fetch current price, market cap, and 24h change for a cryptocurrency.</p>
+                                            <p class="mb-4 text-gray-600">Fetch current price, market cap, and 24h change for a cryptocurrency (in USD).</p>
 
                                             <div class="bg-gray-100 p-4 rounded-md mb-4">
                                                 <code class="text-blue-600">GET /stats?coin={coinParameter}</code>
@@ -115,7 +115,6 @@ app.use('/', (req, res) => {
                                 <footer class="bg-gray-800 text-white py-8 mt-12">
                                     <div class="container mx-auto px-4 text-center">
                                         <p>Created by Satyadev Kushwaha</p>
-                                        <p class="mt-2">Powered by CoinGecko API</p>
                                     </div>
                                 </footer>
                             </div>
