@@ -14,7 +14,7 @@ app.use('/', statsRouter);
 app.use('/', deviationRouter);
 app.use('/', (req, res) => {
     res.setHeader('Content-Type', 'text/html');
-    res.send(`< !DOCTYPE html >
+    res.send(`
         <html lang="en">
             <head>
                 <meta charset="UTF-8">
