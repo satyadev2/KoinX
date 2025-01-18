@@ -114,7 +114,7 @@ app.use('/', (req, res) => {
                                 <!-- Footer -->
                                 <footer class="bg-gray-800 text-white py-8 mt-12">
                                     <div class="container mx-auto px-4 text-center">
-                                        <p>Created by Satyadev Kushwaha</p>
+                                        <p>Created by Satya Kushwaha</p>
                                     </div>
                                 </footer>
                             </div>
